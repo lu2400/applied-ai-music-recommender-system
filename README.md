@@ -29,6 +29,13 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+Popular streaming services usually match songs to users based on their vibe and tempo compared to what the users already like.
+My version will prioritise matching the vibe to the user's preferences and ranking the options.
+Claude recommended this mathematical scoring formula: 
+score=0.35×energy+0.30×mood+0.20×acoustic+0.15xgenre
+where proximity=1−∣user preference−song value∣
+Song will have: genre, energy, mood, and acousticness
+UserProfile will have: fav genre, energy level goal, mood preference, acoustic preference
 ---
 
 ## Getting Started
