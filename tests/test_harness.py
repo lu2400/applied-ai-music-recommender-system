@@ -18,7 +18,7 @@ SONGS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "songs.csv")
 # Each scenario defines input preferences, what to assert, and a minimum score.
 SCENARIOS = [
     {
-        "name": "Pop happy high energy → top result is pop/happy",
+        "name": "Pop happy high energy -> top result is pop/happy",
         "prefs": {
             "genre": "pop", "mood": "happy", "energy": 0.85,
             "likes_acoustic": False, "preferred_decade": 2020,
@@ -30,7 +30,7 @@ SCENARIOS = [
         "min_score": 50,
     },
     {
-        "name": "Lofi chill focused → top result is lofi/chill",
+        "name": "Lofi chill focused -> top result is lofi/chill",
         "prefs": {
             "genre": "lofi", "mood": "chill", "energy": 0.35,
             "likes_acoustic": True, "preferred_decade": 2020,
@@ -41,7 +41,7 @@ SCENARIOS = [
         "min_score": 60,
     },
     {
-        "name": "Rock intense workout → top result is rock/intense",
+        "name": "Rock intense workout -> top result is rock/intense",
         "prefs": {
             "genre": "rock", "mood": "intense", "energy": 0.9,
             "likes_acoustic": False, "preferred_decade": 2010,
@@ -53,7 +53,7 @@ SCENARIOS = [
         "min_score": 50,
     },
     {
-        "name": "Jazz relaxed evening → top result is jazz",
+        "name": "Jazz relaxed evening -> top result is jazz",
         "prefs": {
             "genre": "jazz", "mood": "relaxed", "energy": 0.3,
             "likes_acoustic": True, "preferred_decade": 2000,
@@ -64,7 +64,7 @@ SCENARIOS = [
         "min_score": 40,
     },
     {
-        "name": "Clean lyrics preference → top result is not explicit",
+        "name": "Clean lyrics preference -> top result is not explicit",
         "prefs": {
             "genre": "pop", "mood": "happy", "energy": 0.8,
             "likes_acoustic": False, "preferred_decade": 2010,
@@ -75,7 +75,7 @@ SCENARIOS = [
         "min_score": 0,
     },
     {
-        "name": "Diversity penalty → top 3 results have different artists",
+        "name": "Diversity penalty -> top 3 results have different artists",
         "prefs": {
             "genre": "pop", "mood": "happy", "energy": 0.8,
             "likes_acoustic": False, "preferred_decade": 2010,
@@ -142,7 +142,7 @@ def run_harness() -> tuple[int, int]:
     print("  MUSIC RECOMMENDER — EVALUATION HARNESS")
     print("=" * 72)
     for ok, name, song, conf, reason in rows:
-        mark = "✓" if ok else "✗"
+        mark = "PASS" if ok else "FAIL"
         title = song.get("title", "—")
         artist = song.get("artist", "—")
         print(f"\n  [{mark}] {name}")

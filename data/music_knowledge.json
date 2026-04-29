@@ -1,0 +1,112 @@
+{
+  "documents": [
+    {
+      "id": "genre_lofi",
+      "title": "Lofi / Lo-Fi Hip-Hop",
+      "content": "Lofi (lo-fi hip-hop) features mellow beats, soft melodies, and a nostalgic, laid-back atmosphere. Typical energy: 0.2–0.5. Best for studying, focus, and relaxed evenings. Often instrumental or minimal vocals. Acoustic textures common.",
+      "tags": ["lofi", "lo-fi", "study", "focus", "chill", "relax", "beats", "hip-hop", "mellow", "calm", "soft", "coding", "homework"]
+    },
+    {
+      "id": "genre_pop",
+      "title": "Pop",
+      "content": "Pop music is broadly appealing, driven by catchy melodies, hooks, and modern production. Energy varies widely (0.5–0.95). Typical moods: happy, uplifting, energetic. Often features strong vocals and dance-friendly rhythms.",
+      "tags": ["pop", "catchy", "hook", "upbeat", "dance", "happy", "mainstream", "commercial", "radio", "cheerful"]
+    },
+    {
+      "id": "genre_rock",
+      "title": "Rock / Alternative Rock / Indie Rock",
+      "content": "Rock music is guitar-driven with powerful drums and bass. High energy (0.7–0.95). Moods: intense, moody, melancholic. Great for workouts, driving, or intense focus. Alt rock is more experimental; indie rock has an independent label aesthetic.",
+      "tags": ["rock", "guitar", "drums", "intense", "loud", "workout", "driving", "indie", "alternative", "alt", "grunge", "hard"]
+    },
+    {
+      "id": "genre_jazz",
+      "title": "Jazz",
+      "content": "Jazz is improvisational and harmonically rich. Typical energy: 0.2–0.5. Moods: relaxed, sophisticated, warm. Ideal for dinner, late-night, or background listening. Usually acoustic instruments: piano, saxophone, upright bass, drums.",
+      "tags": ["jazz", "relax", "saxophone", "piano", "improvisation", "smooth", "dinner", "night", "warm", "sophisticated", "acoustic", "swing"]
+    },
+    {
+      "id": "genre_ambient",
+      "title": "Ambient / Atmospheric",
+      "content": "Ambient music creates soundscapes with minimal structure and very low energy (0.1–0.4). Mood: chill, meditative, dreamy. Good for sleep, meditation, and background focus. Highly instrumental with no traditional song structure.",
+      "tags": ["ambient", "atmospheric", "meditation", "sleep", "drone", "soundscape", "dreamy", "background", "peaceful", "calm", "space", "ethereal"]
+    },
+    {
+      "id": "genre_synthwave",
+      "title": "Synthwave / Retro Electronic",
+      "content": "Synthwave is 80s-inspired electronic music with synthesizers, drum machines, and a retro-futuristic feel. Energy: 0.6–0.85. Mood: moody, nostalgic, cinematic. Great for night drives, gaming, or focused work.",
+      "tags": ["synthwave", "electronic", "retro", "80s", "synth", "neon", "night", "drive", "driving", "gaming", "moody", "futuristic", "vapor"]
+    },
+    {
+      "id": "genre_folk",
+      "title": "Folk / Acoustic Singer-Songwriter",
+      "content": "Folk music features acoustic instruments (guitar, banjo, fiddle), storytelling lyrics, and an organic sound. Low-to-medium energy (0.3–0.6). Moods: melancholic, nostalgic, relaxed. Often clean and lyric-focused.",
+      "tags": ["folk", "acoustic", "singer-songwriter", "guitar", "organic", "nostalgic", "melancholic", "storytelling", "country", "natural", "earthy", "unplugged"]
+    },
+    {
+      "id": "genre_hiphop",
+      "title": "Hip-Hop / Rap",
+      "content": "Hip-hop features rhythmic vocal delivery over beats. Energy: 0.7–0.95. Moods: intense, confident, uplifting. Often has explicit content. Great for workouts, parties, and hype. Trap is a modern sub-genre with heavy bass and hi-hats.",
+      "tags": ["hip-hop", "rap", "hiphop", "beats", "bass", "rhyme", "trap", "hype", "party", "workout", "urban", "confident", "lyrics"]
+    },
+    {
+      "id": "mood_study",
+      "title": "Study / Focus / Coding Music",
+      "content": "Study music should have low energy (0.2–0.45), be non-distracting, and often instrumental. Best genres: lofi, ambient, jazz. Mood: focused, chill. Avoid explicit lyrics, high energy, or powerful vocals that pull attention away.",
+      "tags": ["study", "focus", "studying", "homework", "work", "concentrate", "concentration", "coding", "productive", "productivity", "background", "library"]
+    },
+    {
+      "id": "mood_workout",
+      "title": "Workout / Gym / Exercise Music",
+      "content": "Workout music needs high energy (0.8–1.0), fast tempo (130+ BPM), and motivating vibes. Best genres: rock, hip-hop, pop, electronic. Mood: intense, energetic. Helps maintain exercise intensity and push through fatigue.",
+      "tags": ["workout", "gym", "exercise", "run", "running", "cardio", "lifting", "training", "sport", "intense", "pump", "motivation", "hype", "sweat"]
+    },
+    {
+      "id": "mood_chill",
+      "title": "Chill / Unwind / Relaxation Music",
+      "content": "Chill music has low-to-medium energy (0.2–0.55) and a laid-back, easygoing vibe. Best genres: lofi, jazz, indie, ambient. Mood: chill, relaxed. Good for unwinding after work, casual listening, or background during light tasks.",
+      "tags": ["chill", "relax", "relaxing", "unwind", "calm", "easy", "laid-back", "evening", "casual", "vibe", "vibes", "mellow", "cozy", "quiet"]
+    },
+    {
+      "id": "mood_party",
+      "title": "Party / Dance / Club Music",
+      "content": "Party music is high energy (0.75–1.0) with strong beats and dance-friendly rhythm. Best genres: pop, hip-hop, electronic. Mood: happy, energetic, uplifting. High danceability and valence are key. Great for social settings.",
+      "tags": ["party", "dance", "dancing", "club", "disco", "rave", "bpm", "beat", "fun", "celebrate", "celebration", "social", "hype", "crowd"]
+    },
+    {
+      "id": "mood_sad_melancholic",
+      "title": "Sad / Melancholic / Rainy Day Music",
+      "content": "Sad or emotional music has low valence (minor key), introspective quality, and varied energy. Best genres: folk, indie rock, alternative. Moods: melancholic, moody. Good for processing emotions, rainy days, late-night reflection.",
+      "tags": ["sad", "sadness", "emotional", "melancholy", "melancholic", "heartbreak", "cry", "longing", "nostalgic", "rainy", "gloomy", "moody", "dark", "introspective"]
+    },
+    {
+      "id": "mood_morning",
+      "title": "Morning / Energizing / Sunrise Music",
+      "content": "Morning music is uplifting and energizing to start the day. Medium-to-high energy (0.6–0.9). Best genres: pop, indie pop, synthwave. Moods: happy, uplifting, energetic. Positive valence and a bright, forward-moving sound.",
+      "tags": ["morning", "wake", "wakeup", "start", "energize", "bright", "positive", "sunrise", "fresh", "uplifting", "happy", "motivated", "day"]
+    },
+    {
+      "id": "era_1990s",
+      "title": "1990s Music",
+      "content": "The 1990s saw grunge, alternative rock, R&B, and early hip-hop dominate. Key artists: Nirvana, Radiohead, Neil Young. Characteristic sound: raw, guitar-heavy, emotionally direct. Decade value: 1990.",
+      "tags": ["90s", "1990s", "nineties", "grunge", "alternative", "radiohead", "neil young", "nostalgic", "vintage", "classic", "nirvana"]
+    },
+    {
+      "id": "era_2000s",
+      "title": "2000s Music",
+      "content": "The 2000s featured indie rock, pop-punk, and R&B crossovers. Key artists: Coldplay, The Strokes. Era of iTunes and digital downloads. Often polished production with emotional, melodic writing. Decade value: 2000.",
+      "tags": ["2000s", "00s", "noughties", "indie", "coldplay", "pop punk", "millennium", "early 2000s", "aughts"]
+    },
+    {
+      "id": "era_2010s",
+      "title": "2010s Music",
+      "content": "The 2010s were defined by streaming, EDM, trap, and pop crossovers. Artists: The Weeknd, Dua Lipa, Travis Scott. High production quality and digital sound design. Decade value: 2010.",
+      "tags": ["2010s", "10s", "tens", "weeknd", "dua lipa", "travis scott", "edm", "trap", "streaming", "recent past"]
+    },
+    {
+      "id": "era_2020s",
+      "title": "2020s Music",
+      "content": "The 2020s feature lofi revival, bedroom pop, and continued streaming dominance. TikTok-driven micro-trends. More DIY production aesthetics alongside polished pop releases. Decade value: 2020.",
+      "tags": ["2020s", "20s", "recent", "new", "current", "modern", "contemporary", "tiktok", "bedroom pop", "now"]
+    }
+  ]
+}

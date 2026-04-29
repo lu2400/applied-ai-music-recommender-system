@@ -39,17 +39,11 @@ def _fmt_ms(ms: int) -> str:
     s = ms // 1000
     return f"{s // 60}:{s % 60:02d}"
 
-# ── Environment ───────────────────────────────────────────────────────────────
 CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID", "")
 CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET", "")
 REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI", "http://127.0.0.1:8501")
 SPOTIFY_ENABLED = bool(CLIENT_ID and CLIENT_SECRET)
 LLM_ENABLED = bool(os.getenv("GROQ_API_KEY", ""))
-
-# ── Disk-backed OAuth state ───────────────────────────────────────────────────
-# Streamlit creates a NEW session after navigating away and back, so
-# st.session_state alone cannot survive the round-trip to Spotify.
-# Persisting the state value to disk lets us verify it in the new session.
 
 _STATE_FILE = pathlib.Path(".oauth_state")
 
@@ -74,9 +68,6 @@ def _clear_oauth_state() -> None:
     _STATE_FILE.unlink(missing_ok=True)
 
 
-# ── Spotify → local genre mapping ─────────────────────────────────────────────
-# Spotify's genre tags are very granular ("indie electropop", "vapor twitch", …).
-# We map them to our local taxonomy with a simple keyword scan.
 _GENRE_KEYWORDS = [
     ("lofi", "lofi"), ("lo-fi", "lofi"), ("lo fi", "lofi"),
     ("jazz", "jazz"), ("blues", "jazz"), ("soul", "jazz"), ("bossa", "jazz"),
@@ -158,7 +149,6 @@ def _init_state():
 
 _init_state()
 
-# ── Song catalogue ────────────────────────────────────────────────────────────
 @st.cache_data
 def _load_catalogue():
     songs = load_songs("data/songs.csv")
@@ -172,7 +162,6 @@ def _load_catalogue():
 
 songs, ALL_GENRES, ALL_MOODS, ALL_TAGS = _load_catalogue()
 
-# ── OAuth callback ────────────────────────────────────────────────────────────
 params = st.query_params
 if "code" in params and "state" in params:
     code = params["code"]
@@ -203,15 +192,12 @@ if "code" in params and "state" in params:
                 "**Redirect URI** in the Spotify Dashboard exactly match your `.env`."
             )
 
-# ─────────────────────────────────────────────────────────────────────────────
 # SIDEBAR
-# ─────────────────────────────────────────────────────────────────────────────
 _DECADES = [1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]
 
 with st.sidebar:
     st.title("🎵 Your Preferences")
 
-    # ── AI Mode ───────────────────────────────────────────────────────────────
     if LLM_ENABLED:
         with st.expander("🤖 Describe what you want (AI)", expanded=bool(st.session_state.ai_prefs)):
             ai_input = st.text_input(
@@ -238,7 +224,6 @@ with st.sidebar:
                     st.rerun()
         st.divider()
 
-    # Use AI-extracted values as widget defaults when available
     _ai = st.session_state.ai_prefs
     _genre_default = _ai.get("genre", ALL_GENRES[0])
     _genre_idx = ALL_GENRES.index(_genre_default) if _genre_default in ALL_GENRES else 0
@@ -379,9 +364,7 @@ with st.sidebar:
                 unsafe_allow_html=True,
             )
 
-# ─────────────────────────────────────────────────────────────────────────────
 # MAIN — Now Playing
-# ─────────────────────────────────────────────────────────────────────────────
 st.title("🎵 Music Recommender")
 
 sp: SpotifyClient | None = st.session_state.spotify
@@ -482,9 +465,7 @@ elif SPOTIFY_ENABLED:
     st.info("Connect Spotify in the sidebar to enable playback controls and album art.")
     st.divider()
 
-# ─────────────────────────────────────────────────────────────────────────────
-# MAIN — Recommendations
-# ─────────────────────────────────────────────────────────────────────────────
+
 st.subheader("Recommendations")
 
 if not st.session_state.recommendations:

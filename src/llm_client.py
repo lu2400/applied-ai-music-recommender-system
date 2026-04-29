@@ -23,10 +23,15 @@ def _generate(prompt: str) -> str:
     return resp.choices[0].message.content.strip()
 
 
-def parse_user_request(text: str, all_genres: list, all_moods: list) -> dict:
-    """Use Llama (via Groq) to extract structured music preferences from a natural language request."""
-    prompt = f"""Extract music preferences from this request: "{text}"
+def parse_user_request(
+    text: str, all_genres: list, all_moods: list, context: str = ""
+) -> dict:
+    """Use Llama (via Groq) to extract structured music preferences from a natural language request.
 
+    context: optional RAG-retrieved knowledge to inject before the extraction prompt.
+    """
+    context_block = f"\n\n{context}\n" if context else ""
+    prompt = f"""Extract music preferences from this request: "{text}"{context_block}
 Available genres (choose the single closest match): {all_genres}
 Available moods (choose the single closest match): {all_moods}
 
