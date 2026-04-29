@@ -63,7 +63,6 @@ def main() -> None:
     print(f"Loaded songs: {len(songs)}")
 
     profiles = [
-        # --- Normal profiles ---
         (
             "High-Energy Pop",
             {"genre": "pop", "mood": "happy", "energy": 0.9, "likes_acoustic": False},
@@ -76,7 +75,6 @@ def main() -> None:
             "Intense Rock Workout",
             {"genre": "rock", "mood": "intense", "energy": 0.95, "likes_acoustic": False},
         ),
-        # --- Adversarial / edge case profiles ---
         (
             "EDGE: Ghost Genre (country not in catalog)",
             {"genre": "country", "mood": "happy", "energy": 0.7, "likes_acoustic": False},
@@ -89,7 +87,6 @@ def main() -> None:
             "EDGE: Contradictory (high energy + loves acoustic)",
             {"genre": "folk", "mood": "melancholic", "energy": 0.9, "likes_acoustic": True},
         ),
-        # --- New extended profiles ---
         (
             "Nostalgic 90s Listener (no explicit)",
             {

@@ -37,7 +37,7 @@ class UserProfile:
 
 class Recommender:
     """
-    OOP implementation of the recommendation logic.
+    O-OP implementation of the recommendation logic.
     Required by tests/test_recommender.py
     """
     def __init__(self, songs: List[Song]):
